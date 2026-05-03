@@ -1,5 +1,6 @@
 "use client";
 import { ArrowUp, Camera, Play, Users, MessageSquare } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -13,7 +14,13 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <div className="flex items-center gap-3 mb-6">
-            <img src="/RT_Strykon_Colour.png" alt="RT Strykon" className="h-10 w-10 object-contain" />
+            <Image
+              src="/RTS-turf/RT_Strykon_Colour.png"
+              alt="RT Strykon"
+              width={40}
+              height={40}
+              className="h-10 w-10 object-contain"
+            />
             <span className="font-bebas-neue uppercase text-2xl font-black text-gradient-gold">RT STRYKON</span>
           </div>
           <p className="text-neutral-500 text-sm leading-relaxed">

@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { Trophy, Waves, Clock } from "lucide-react";
+import Image from "next/image";
 
 const features = [
   { icon: Trophy, text: "Certified Turf Quality" },
@@ -66,10 +67,12 @@ export default function About() {
         >
           <div className="absolute -inset-4 bg-primary/5 rounded-2xl transform rotate-2" />
           <div className="relative h-[500px] lg:h-[600px] w-full rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
-            <img
+            <Image
               alt="Football action on artificial turf under stadium lights"
+              fill
+              sizes="(max-width: 1024px) 100vw, 60vw"
               className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
-              src="/footballturf.jpg"
+              src="/RTS-turf/footballturf.jpg"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a0c0c]/80 via-transparent to-transparent" />
           </div>

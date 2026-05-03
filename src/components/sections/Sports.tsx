@@ -2,41 +2,42 @@
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import { Activity, CircleDashed, Target, Trophy, Waves } from "lucide-react";
+import Image from "next/image";
 
 const sports = [
   {
     name: "CRICKET",
     desc: "Indoor nets & bowling machines",
     icon: Activity,
-    img: "/batball.jpg",
+    img: "/RTS-turf/batball.jpg",
     className: "bento-item-1",
   },
   {
     name: "SWIMMING",
     desc: "Swimming Pool",
     icon: Waves,
-    img: "/swimmingpool.jpg",
+    img: "/RTS-turf/swimmingpool.jpg",
     className: "bento-item-2",
   },
   {
     name: "BASKETBALL",
     desc: "FIBA standard courts",
     icon: CircleDashed,
-    img: "/basketball.jpg",
+    img: "/RTS-turf/basketball.jpg",
     className: "bento-item-3",
   },
   {
     name: "PICKLEBALL",
     desc: "Fastest growing sport, elite courts",
     icon: Target,
-    img: "/pickleball.jpg",
+    img: "/RTS-turf/pickleball.jpg",
     className: "bento-item-4",
   },
   {
     name: "FOOTBALL",
     desc: "Certified turf",
     icon: Trophy,
-    img: "/football.jpg",
+    img: "/RTS-turf/football.jpg",
     className: "bento-item-5",
   },
 ];
@@ -78,8 +79,10 @@ export default function Sports() {
               `}
             >
               <div className="absolute inset-0 w-full h-full overflow-hidden">
-                <img
+                <Image
                   alt={s.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="w-full h-full object-cover object-center transition-transform duration-1000 group-hover:scale-110 pointer-events-none"
                   src={s.img}
                 />

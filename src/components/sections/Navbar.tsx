@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { MessageSquare, Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const links = [
   { label: "Facilities", href: "#facilities" },
@@ -32,10 +33,12 @@ export default function Navbar() {
       >
         <div className="flex justify-between items-center px-6 md:px-10 py-4 max-w-screen-2xl mx-auto">
           <a href="#" className="flex items-center gap-3 group">
-            <img
+            <Image
               alt="RT STRYKON Logo"
+              width={40}
+              height={40}
               className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-110"
-              src="/RT_Strykon_Colour.png"
+              src="/RTS-turf/RT_Strykon_Colour.png"
             />
             <span className="font-bebas-neue uppercase tracking-widest text-2xl font-black text-gradient-gold">
               RT STRYKON
